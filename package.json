@@ -6,7 +6,14 @@
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
+    "immutable": "3.8.1",
     "react": "15.2.1",
-    "react-native": "0.31.0"
+    "react-native": "0.31.0",
+    "react-native-keyboard-spacer": "0.2.0",
+    "redux": "3.5.2",
+    "react-redux": "4.4.5",
+    "react-proxy": "1.1.2",
+    "react-deep-force-update": "2.0.1",
+    "reselect": "2.5.1"
   }
 }
