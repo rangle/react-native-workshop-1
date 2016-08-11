@@ -3,7 +3,7 @@ import { FILTER_POKEMON } from '../constants';
 import pokemonData from '../utils/pokemon-data.json';
 
 const initialState = fromJS({
-  all: pokemonData,
+  all: pokemonData.results,
   query: '',
 });
 

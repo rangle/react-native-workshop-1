@@ -4,7 +4,11 @@ import {
   Text,
   View
 } from 'react-native';
-
+import Immutable, { List } from 'immutable';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
+import clrs from '../utils/clrs';
+import { getPokemonImageUrl } from '../utils/pokemon';
 
 class Pokedex extends Component {
   render() {
@@ -44,4 +48,20 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Pokedex;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Pokedex);
+
+function mapStateToProps(state) {
+  return {
+    pokemon: state.pokemon.get('all'),
+    query: state.pokemon.get('query'),
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    filter: query => dispatch(actions.filter(query)),
+  };
+}

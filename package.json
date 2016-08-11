@@ -11,6 +11,7 @@
     "react-native": "0.31.0",
     "react-native-keyboard-spacer": "0.2.0",
     "redux": "3.5.2",
+    "redux-logger": "2.6.1",
     "react-redux": "4.4.5",
     "react-proxy": "1.1.2",
     "react-deep-force-update": "2.0.1",
