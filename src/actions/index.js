@@ -1,8 +1,8 @@
 import { FILTER_POKEMON } from '../constants';
 
-export function filter(payload) {
+export function filter(query) {
   return {
     type: FILTER_POKEMON,
-    payload,
+    payload: query,
   }
 }
