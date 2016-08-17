@@ -1,16 +1,18 @@
 import { fromJS } from 'immutable';
-import { FILTER_POKEMON } from '../constants';
+import { POKEMON } from '../constants';
 import pokemonData from '../utils/pokemon-data.json';
 
 const initialState = fromJS({
-  all: pokemonData.results,
+  all: [],
   query: '',
 });
 
 function pokemon(state = initialState, action = {}) {
   switch (action.type) {
-    case FILTER_POKEMON:
+    case POKEMON.FILTER_POKEMON:
       return state.set('query', fromJS(action.payload));
+    case POKEMON.RECEIVED_ALL_POKEMONS:
+      return state.set('all', fromJS(action.payload));
     default:
       return state;
   }
