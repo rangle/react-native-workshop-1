@@ -1,10 +1,11 @@
-import immutableToJS from '../utils/immutableToJS';
+// import immutableToJS from '../utils/immutableToJS';
 import createLogger from 'redux-logger';
 
 const logger = createLogger({
   collapsed: true,
   stateTransformer: (state) => {
-    return immutableToJS(state);
+    // return immutableToJS(state);
+    return state;
   },
   predicate: (getState, { type }) => {
     const blacklist = [];

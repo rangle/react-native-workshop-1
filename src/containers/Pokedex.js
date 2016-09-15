@@ -4,7 +4,7 @@ import {
   Text,
   View
 } from 'react-native';
-import Immutable, { List } from 'immutable';
+// import Immutable, { List } from 'immutable';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import clrs from '../utils/clrs';
@@ -53,10 +53,10 @@ export default connect(
   mapDispatchToProps,
 )(Pokedex);
 
-function mapStateToProps(state) {
+function mapStateToProps({pokemon}) {
   return {
-    pokemon: state.pokemon.get('all'),
-    query: state.pokemon.get('query'),
+    pokemon: pokemon.all,
+    query: pokemon.query,
   };
 }
 
